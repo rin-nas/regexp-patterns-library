@@ -1,4 +1,4 @@
-# Коллекция регулярных выражений
+# Регулярные выражения
 
 ## Диалекты
 * [PCRE](http://www.pcre.org/current/doc/html/pcre2syntax.html), применяется в [PHP](http://php.net/) и др. ПО
