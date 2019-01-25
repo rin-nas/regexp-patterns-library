@@ -56,14 +56,15 @@
 ### Дата и время
 
 #### нестрогая валидация
-* Дата в формате `ГГГ-ММ-ДД`: `/^\d{4}-\d{2}-\d{2}$/sSX`
+* Дата в формате `ГГГГ-ММ-ДД`: `/^\d{4}-\d{2}-\d{2}$/sSX`
 * Время в формате `ЧЧ:ММ:СС`: `/^\d{2}:\d{2}(:\d{2})?$/sSX`
 
+#### строгая валидация
+* Валидация даты в формате `ГГГГ-ММ-ДД` с проверкой корректности года, месяца и дня, но без проверки YYYY-02-29 в високосных годах (нужно доделать): [PCRE](https://regex101.com/r/WnauVT/6/)
 
 ### Форматы
 * Валидация IPv4 + IPv6: [PCRE](https://regex101.com/r/eVEGRY/1/), [link](https://stackoverflow.com/questions/4460586/javascript-regular-expression-to-check-for-ip-addresses/26445549#26445549). В языках программирования есть готовый валидатор: PHP —  [`filter_var()`](http://php.net/manual/en/function.filter-var.php), NodeJS — [`net.isIP()`](https://nodejs.org/api/net.html#net_net_isip_input).
 * Захват адреса электронной почты ([Email address](https://en.wikipedia.org/wiki/Email_address)) из текста: [PCRE](https://regex101.com/r/Q4dsL5/14)
-* Валидация даты в формате ГГГГ-ММ-ДД без проверки YYYY-02-29 в високосных годах (нужно доделать): [PCRE](https://regex101.com/r/WnauVT/6/)
 * Захват многострочных комментариев (в 2 раза эффективнее, чем `/\* .*? \*/`): [PCRE](https://regex101.com/r/r2ESLq/2/)
 
 ### HTML
