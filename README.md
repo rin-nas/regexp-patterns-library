@@ -6,7 +6,7 @@
 * есть и [другие](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines) достойные внимания, но в этом документе не рассматриваются
 
 ## Функции и методы объектов для обработки строк регулярными выражениями в языках программирования
-Метод обработки|JavaScript|PHP
+Тип обработки|JavaScript|PHP
 ---------------|----------|---
 Проверка соответствия (валидация)| [`RegExp.test()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)|[`preg_match()`](http://php.net/manual/function.preg-match.php), [`preg_grep()`](http://php.net/manual/function.preg-grep.php)
 Поиск и захват подстрок| [`RegExp.exec()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.search()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)|[`preg_match_all()`](http://php.net/manual/function.preg-match-all.php)
