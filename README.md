@@ -134,6 +134,7 @@
 * https://regular-expressions.mobi/creditcard.html?wlr=1
 * https://github.com/vapniks/regex-collection/blob/master/regex-collection.sh
 * https://github.com/dukei/any-balance-providers/blob/master/modules/ab/source/vendor/string.js
+* https://docs.oracle.com/javase/1.5.0/docs/api/java/util/regex/Pattern.html
 
 ```
 Тип данных CIDR (бесклассовая маршрутизация интернет домена, Classless Internet Domain Routing) следует соглашению для сетевых адресов IPv4 и IPv6. Вот несколько примеров:
