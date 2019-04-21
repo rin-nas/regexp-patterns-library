@@ -2,16 +2,21 @@
 
 ## Диалекты
 * [PCRE](http://www.pcre.org/current/doc/html/pcre2syntax.html), применяется в [PHP](http://php.net/) и др. ПО
-* [ECMA 262](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), применяется в [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (JS)
+* [ECMA 262](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions), применяется в [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) (JS)
 * есть и [другие](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines) достойные внимания, но в этом документе не рассматриваются
+
+## Когда применять, а когда не применять регулярные выражения?
+
+Если вы пишите прототип, или если скорость работы не принципиальна — используйте регулярные выражения, это ускорит скорость разработки и уменьшит количество кода.
+Но, если итоговое решение будет работать медленно, то его всегда можно будет переписать без использования регулярных выражений.
 
 ## Функции и методы объектов для обработки строк регулярными выражениями в языках программирования
 Тип обработки|JavaScript|PHP
----------------|----------|---
-Проверка соответствия (валидация)| [`RegExp.test()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)|[`preg_match()`](http://php.net/manual/function.preg-match.php), [`preg_grep()`](http://php.net/manual/function.preg-grep.php)
-Поиск и захват подстрок| [`RegExp.exec()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.search()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)|[`preg_match_all()`](http://php.net/manual/function.preg-match-all.php)
-Поиск, захват и замена подстрок| [`String.replace()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)|[`preg_replace()`](http://php.net/manual/en/function.preg-replace.php), [`preg_replace_callback()`](http://php.net/manual/function.preg-replace-callback.php), [`preg_replace_callback_array()`](http://php.net/manual/function.preg-replace-callback-array.php), [`preg_filter()`](http://php.net/manual/function.preg-filter.php)
-Поиск и разбиение на подстроки| [`String.split()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)|[`preg_split()`](http://php.net/manual/function.preg-split.php)
+-------------|----------|---
+Проверка соответствия (валидация)| [`RegExp.test()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)|[`preg_match()`](http://php.net/manual/function.preg-match.php), [`preg_grep()`](http://php.net/manual/function.preg-grep.php)
+Поиск и захват подстрок| [`RegExp.exec()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.search()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/search)|[`preg_match_all()`](http://php.net/manual/function.preg-match-all.php)
+Поиск, захват и замена подстрок| [`String.replace()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/replace)|[`preg_replace()`](http://php.net/manual/en/function.preg-replace.php), [`preg_replace_callback()`](http://php.net/manual/function.preg-replace-callback.php), [`preg_replace_callback_array()`](http://php.net/manual/function.preg-replace-callback-array.php), [`preg_filter()`](http://php.net/manual/function.preg-filter.php)
+Поиск и разбиение на подстроки| [`String.split()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/split)|[`preg_split()`](http://php.net/manual/function.preg-split.php)
 
 ## Виды соответствия
 * Полное — вся строка соответствует шаблону регулярного выражения, которое всегда начинается с `^` и заканчивается на `$`.
@@ -24,7 +29,7 @@
 ## Почему регулярные выражения работают медленно?
 
 Главная проблема медлительности — многочисленные откаты в случае неудачи в одной из веток поиска, которые могут привести к превышению максимального времени выполнения. Подробнее см. [Catastrophic Backtracking](https://www.regular-expressions.info/catastrophic.html). 
-* Пример долго выполняющегося рег. выражения [PCRE](https://regex101.com/r/jye7NW/3) и его оптимизированной версии, работающей почти в 10 раз быстрее: [PCRE](https://regex101.com/r/A9qf3S/1)
+* Пример долго выполняющегося регулярного выражения [PCRE](https://regex101.com/r/jye7NW/3) и его оптимизированной версии, работающей почти в 10 раз быстрее: [PCRE](https://regex101.com/r/A9qf3S/1)
 
 ## Как писать быстро работающие регулярные выражения?
 
@@ -34,14 +39,14 @@
 4. Замените нежадные квантификаторы типа `.*?` на жадные. Но часть рег. выражения нужно будет немного переписать и усложнить ради увеличения скорости.
 5. Не используйте флаг `/u` (юникод в PCRE). Возможно, часть рег. выражения нужно будет немного переписать и усложнить ради увеличения скорости.
 
-## Что делать, если диалект рег. выражения не поддерживает нужной мне возможности?
+## Что делать, если диалект регулярные выражения не поддерживает нужной мне возможности?
 1. Регулярные выражения PCRE пока поддерживают просмотр назад только с фиксированной длиной. Т.е. внутри `(?<!…)` нельзя использовать квантификаторы `?`, `*`, `+`, `{…,…}`. Но есть способ обойти это ограничение, используя [`\K`](http://www.pcre.org/current/doc/html/pcre2syntax.html#SEC11).
 2. Регулярные выражения JS пока не поддерживают всех возможностей PCRE, но есть готовые решения:
     * Библиотека [`XRegExp`](https://github.com/slevithan/xregexp), которая расширяет стандартные возможности рег. выражений в JS до уровня PCRE.
     * `String.prototype.matchRecursive()` — реализация JavaScript метода [`String.match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) с учётом рекурсии: [JS Fiddle](https://jsfiddle.net/zqta1481/14/)
     * Генератор регулярного выражения до заданной глубины рекурсии `(?R)` (TODO сделать форму ввода): [JS Fiddle](https://jsfiddle.net/rea4sxgn/)
 
-## Какие онлайн сервисы существуют для обработки строк рег. выражениями?
+## Какие онлайн сервисы существуют для обработки строк регулярными выражениями?
 Используйте сервис [`regex101.com`](https://regex101.com/r/iB63bg/2/) для написания и тестирования ваших регурярных выражений, а так же для поиска и замены подстрок через регулярные выражения в диалектах PRCE, JS, Python, Golang.
 
 ## Склад готовых регулярных выражений
