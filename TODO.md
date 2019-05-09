@@ -13,6 +13,7 @@
 * https://github.com/vapniks/regex-collection/blob/master/regex-collection.sh
 * https://github.com/dukei/any-balance-providers/blob/master/modules/ab/source/vendor/string.js
 * https://docs.oracle.com/javase/1.5.0/docs/api/java/util/regex/Pattern.html
+* https://github.com/rin-nas/php5-utf8/blob/master/UTF8.php
 
 JSON
 * https://github.com/rin-nas/php-json/blob/master/JSON.php
