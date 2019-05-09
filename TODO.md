@@ -1,6 +1,6 @@
 # TODO
 
-* Маркдаун,
+* Маркдаун
 * Границы предложений
 * Форматы
 * https://gist.github.com/gruber/249502 (URL)
@@ -13,7 +13,13 @@
 * https://github.com/vapniks/regex-collection/blob/master/regex-collection.sh
 * https://github.com/dukei/any-balance-providers/blob/master/modules/ab/source/vendor/string.js
 * https://docs.oracle.com/javase/1.5.0/docs/api/java/util/regex/Pattern.html
+
+JSON
 * https://github.com/rin-nas/php-json/blob/master/JSON.php
+* http://seriot.ch/parsing_json.php
+* https://m.habr.com/ru/company/mailru/blog/314014/ Парсинг JSON — это минное поле
+* https://stackoverflow.com/questions/2583472/regex-to-validate-json
+* https://codegolf.stackexchange.com/questions/474/write-a-json-validator
 
 ```
 Тип данных CIDR (бесклассовая маршрутизация интернет домена, Classless Internet Domain Routing) следует соглашению для сетевых адресов IPv4 и IPv6. Вот несколько примеров:
