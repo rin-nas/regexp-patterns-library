@@ -5,7 +5,7 @@
 * Форматы
 * https://gist.github.com/gruber/249502 (URL)
 * https://daringfireball.net/2010/07/improved_regex_for_matching_urls
-* https://m.habr.com/post/429548/ - Плагин «Rainbow CSV» как альтернатива Excel (см детектирование разделителя csv)
+* https://m.habr.com/post/429548/ - Плагин «Rainbow CSV» как альтернатива Excel (см детектирование разделителя значений полей)
 * https://m.habr.com/post/343116/ - Как я написал приложение, которое за 15 минут делало то же самое, что и регулярн...
 * https://www.regular-expressions.info/examplesprogrammer.html
 * https://www.regular-expressions.info/examples.html?wlr=1
