@@ -88,7 +88,7 @@
 * Выделение слов и чисел из текста [PCRE](https://regex101.com/r/fpu9Gb/2/)
 
 ### SQL
-* Детектирование SQL на модификацию данных: [PCRE](https://regex101.com/r/CcSugS/14)
+* Детектирование SQL на модификацию данных: [PCRE](https://regex101.com/r/CcSugS/16)
 * Удаление комментариев из SQL (замена на пробел): [PCRE](https://regex101.com/r/SjGwyh/3)
 * Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/0A9MoC/5)
 
