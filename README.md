@@ -98,7 +98,7 @@
 
 ### Валидация качества пароля
 
-Регулярное выражение: [PCRE](https://regex101.com/r/MOWCV3/9)
+Регулярное выражение: [PCRE](https://regex101.com/r/MOWCV3/10)
 
 Пароль должен соответствовать следующим требованиям:
 1. длина от 8 до 72 символов (72 символа — это ограничение алгоритма [bf](https://postgrespro.ru/docs/postgresql/11/pgcrypto#PGCRYPTO-CRYPT-ALGORITHMS))
