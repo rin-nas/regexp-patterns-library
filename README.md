@@ -73,6 +73,7 @@
 * Валидация IPv4 + IPv6: [PCRE](https://regex101.com/r/eVEGRY/1/), [link](https://stackoverflow.com/questions/4460586/javascript-regular-expression-to-check-for-ip-addresses/26445549#26445549). В языках программирования есть готовый валидатор: PHP —  [`filter_var()`](http://php.net/manual/en/function.filter-var.php), NodeJS — [`net.isIP()`](https://nodejs.org/api/net.html#net_net_isip_input).
 * Захват адреса электронной почты ([Email address](https://en.wikipedia.org/wiki/Email_address)) из текста: [PCRE](https://regex101.com/r/Q4dsL5/14)
 * Захват многострочных комментариев (в 2 раза эффективнее, чем `/\* .*? \*/`): [PCRE](https://regex101.com/r/r2ESLq/2/)
+* Base64: [PCRE](https://regex101.com/r/XmNupG/1/)
 
 ### HTML
 * Захват [xml и html сущностей](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references): [PCRE](https://regex101.com/r/xhNZc5/4/), [JS](https://regex101.com/r/N5GFsv/1/) (strict); [PCRE](https://regex101.com/r/0OOLyS/1) ([non strict](https://stackoverflow.com/questions/15532252/why-is-reg-being-rendered-as-without-the-bounding-semicolon)).
