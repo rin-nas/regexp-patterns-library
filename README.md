@@ -72,7 +72,7 @@
 ### Форматы
 * Валидация IPv4 + IPv6: [PCRE](https://regex101.com/r/eVEGRY/1/), [link](https://stackoverflow.com/questions/4460586/javascript-regular-expression-to-check-for-ip-addresses/26445549#26445549). В языках программирования есть готовый валидатор: PHP —  [`filter_var()`](http://php.net/manual/en/function.filter-var.php), NodeJS — [`net.isIP()`](https://nodejs.org/api/net.html#net_net_isip_input).
 * Захват адреса электронной почты ([Email address](https://en.wikipedia.org/wiki/Email_address)) из текста: [PCRE](https://regex101.com/r/Q4dsL5/14)
-* Захват многострочных комментариев (в 2 раза эффективнее, чем `/\* .*? \*/`): [PCRE](https://regex101.com/r/r2ESLq/3/)
+* Захват многострочных комментариев (в 2 раза эффективнее, чем `/\* .*? \*/`): [PCRE](https://regex101.com/r/QMfe87/1/)
 * Base64: [PCRE](https://regex101.com/r/XmNupG/1/)
 
 ### HTML
@@ -90,7 +90,7 @@
 
 ### SQL
 * Детектирование SQL на модификацию данных: [PCRE](https://regex101.com/r/CcSugS/16)
-* Удаление комментариев из SQL (замена на пробел): [PCRE](https://regex101.com/r/SjGwyh/3)
+* Удаление комментариев из SQL (замена на пробел): [PCRE](https://regex101.com/r/SjGwyh/4)
 * Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/0A9MoC/5)
 
 ### Прочее
