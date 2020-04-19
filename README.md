@@ -92,10 +92,9 @@
 
 ### SQL
 * Детектирование SQL на модификацию данных: [PCRE](https://regex101.com/r/CcSugS/17)
-* Удаление комментариев из SQL (замена на пробел): [PCRE](https://regex101.com/r/SjGwyh/4)
-* Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/0A9MoC/5)
 
 ### PostgreSQL v10+
+* Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/dOjpNR/1)
 
 Захват квотированной строки (PCRE):
 ```regexp
