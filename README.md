@@ -95,6 +95,91 @@
 * Удаление комментариев из SQL (замена на пробел): [PCRE](https://regex101.com/r/SjGwyh/4)
 * Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/0A9MoC/5)
 
+### PostgreSQL v10+
+* Захват квотированной строки:
+```regexp
+(?>     
+        '(?>[^']+|'')*'                   #String Constants
+    |   \b[Ee]'(?>[^\\']+|''|\\.)*'       #String Constants With C-Style Escapes
+    |   (?<stringDollarTag>\$[a-zA-Z]*\$) #Dollar-Quoted String
+            [^$]*+  #speed improves
+            .*?
+        \k<stringDollarTag>
+)
+```
+* Захват квотированного названия объекта БД:
+```regexp
+"(?>[^\\"]+|""|\\.)*"
+```
+* Захват комментариев:
+```regexp
+(?>
+    #singe-line comment
+    (?<singeLineComment>-- [^\r\n]*+)
+  |
+    #multi-line comment
+    (?<MutilineComment>
+        /\*
+          [^*/]*+
+          (?> [^*/]++
+            | \*[^/]
+            | /[^*]
+            | (?&MutilineComment)
+          )*+
+        \*/
+    )
+)
+```
+
+### MySQL v8+
+* Захват квотированной строки:
+```regexp
+(?>"(?>[^\\"]+|""|\\.)*"|'(?>[^\\']+|''|\\.)*')
+```
+* Захват квотированного названия объекта БД:
+```regexp
+`(?>[^\\`]+|``|\\.)*`
+```
+* Захват комментариев:
+```regexp
+(?>
+    #singe-line comment
+    (?<singeLineComment>-- (?=\s) [^\r\n]*+)
+  |
+    #multi-line comment by Jeffrey Friedl (fastest)
+    (?<multiLineComment>
+        /\*
+          [^*]* \*+
+          (?:[^*/][^*]*\*+)*
+        /
+    )
+)
+```
+
+### ClickHouse v1+
+* Захват квотированной строки:
+```regexp
+'(?>[^\\']+|''|\\.)*'
+```
+* Захват квотированного названия объекта БД:
+```regexp
+(?>"(?>[^\\"]+|""|\\.)*"|`(?>[^\\`]+|``|\\.)*`)
+```
+* Захват комментариев:
+```regexp
+(?>
+    #singe-line comment
+    -- [^\r\n]*+
+  |
+    #multi-line comment by Jeffrey Friedl (fastest)
+    /\*
+      [^*]* \*+
+      (?:[^*/][^*]*\*+)*
+    /
+)
+```
+
+
 ### Прочее
 * Валидация (неполная, но быстрая) регулярного выражения на диалект ECMA 262 (JavaScript), есть проверка на уникальность флагов: [PCRE](https://regex101.com/r/iB63bg/3/)
 
