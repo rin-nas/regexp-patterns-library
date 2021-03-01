@@ -220,3 +220,7 @@
 * `\f` represents the form feed character `U+000C`
 * `\n` represents the line feed character `U+000A`
 * `\r` represents the carriage return character `U+000D`
+
+## Ссылки по теме
+
+1. https://github.com/aloisdg/awesome-regex
