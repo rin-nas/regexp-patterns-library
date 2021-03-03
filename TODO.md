@@ -15,6 +15,7 @@
 * https://docs.oracle.com/javase/1.5.0/docs/api/java/util/regex/Pattern.html
 * https://github.com/rin-nas/php5-utf8/blob/master/UTF8.php
 * https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS
+* https://regex101.com/r/IgfAG9/1/ - проверка наличия ссылок в тексте
 
 JSON
 * https://github.com/rin-nas/php-json/blob/master/JSON.php
