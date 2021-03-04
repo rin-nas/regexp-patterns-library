@@ -15,8 +15,8 @@
 * https://docs.oracle.com/javase/1.5.0/docs/api/java/util/regex/Pattern.html
 * https://github.com/rin-nas/php5-utf8/blob/master/UTF8.php
 * https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS
-* https://regex101.com/r/sEGPFE/1/ - проверка наличия ссылок в тексте, но не захват ссылок
-* https://regex101.com/r/I5In0d/1/ - проверка наличия русских и английских букв одновременно
+* https://regex101.com/r/sEGPFE/1/ - захват хоста в тексте для обнаружения ссылок
+* https://regex101.com/r/I5In0d/1/ - захват русской и английской буквы (и в обратном порядке) для обнаружения текста на кириллице и латинице
 
 
 JSON
