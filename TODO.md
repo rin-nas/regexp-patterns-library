@@ -72,3 +72,16 @@ parseUri.options = {
 };
 
 ```
+
+
+Примеры настоящих фамилий и имён, которые не пройдут валидацию по регулярке проверки ФИО
+```
+Mkrtchyan
+Mkrtchian
+Mkrtcyn
+Hoghmrtsyan
+Kbiltsetskhlashvili
+Aiya
+Хауеева
+Sayyod
+```
