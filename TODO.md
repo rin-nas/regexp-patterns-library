@@ -17,6 +17,7 @@
 * https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS
 * https://regex101.com/r/sEGPFE/4/ - захват хоста в тексте для обнаружения ссылок
 * https://regex101.com/r/I5In0d/1/ - захват русской и английской буквы (и в обратном порядке) для обнаружения текста на кириллице и латинице
+* https://blogs.msdn.microsoft.com/testing123/2009/02/06/email-address-test-cases/
 
 
 JSON
