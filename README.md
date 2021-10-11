@@ -6,7 +6,7 @@
 
 ## Диалекты
 * [PCRE](http://www.pcre.org/current/doc/html/pcre2syntax.html), применяется в [PHP](http://php.net/) и др. ПО
-* [ECMA 262](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions), применяется в [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) (JS)
+* [ECMA 262](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions), применяется в [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
 * есть и [другие](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines) достойные внимания, но в этом документе не рассматриваются
 
 ## Функции и методы объектов для обработки строк регулярными выражениями в языках программирования
