@@ -99,9 +99,9 @@
 Захват квотированной строки (PCRE):
 ```regexp
 (?>     
-        '(?>[^']+|'')*'                   #String Constants
-    |   \b[Ee]'(?>[^\\']+|''|\\.)*'       #String Constants With C-Style Escapes
-    |   (?<stringDollarTag>\$[a-zA-Z]*\$) #Dollar-Quoted String
+        '(?>[^']+|'')*'                   #string constants
+    |   \b[Ee]'(?>[^\\']+|''|\\.)*'       #string constants with C-style escapes
+    |   (?<stringDollarTag>\$[a-zA-Z]*\$) #dollar-quoted string
             [^$]*+  #speed improves
             .*?
         \k<stringDollarTag>
@@ -126,7 +126,7 @@
           (?> [^*/]++
             | \*[^/]
             | /[^*]
-            | (?&MutilineComment)
+            | (?&MutilineComment) #recursive
           )*+
         \*/
     )
