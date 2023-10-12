@@ -189,14 +189,14 @@ PCRE
 * Детектирование SQL на модификацию данных: [PCRE](https://regex101.com/r/CcSugS/17)
 
 ### PostgreSQL v10+
-* Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/dOjpNR/1)
+* Разбиение SQL на несколько запросов по символу `;`: [PCRE](https://regex101.com/r/nj3z8j/1)
 
 Захват квотированной строки (PCRE):
 ```regexp
 (?>     
-        '(?>[^']+|'')*'                   #string constants
-    |   \b[Ee]'(?>[^\\']+|''|\\.)*'       #string constants with C-style escapes
-    |   (?<stringDollarTag>\$[a-zA-Z]*\$) #dollar-quoted string
+        '(?>[^']+|'')*'                    #string constants
+    |   \b[Ee]'(?>[^\\']+|''|\\.)*'        #string constants with C-style escapes
+    |   (?<stringDollarTag>\$[a-zA-Z_]*\$) #dollar-quoted string
             [^$]*+  #speed improves
             .*?
         \k<stringDollarTag>
