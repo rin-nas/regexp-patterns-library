@@ -196,7 +196,7 @@ PCRE
 (?>     
         '(?>[^']+|'')*'                    #string constants
     |   \b[Ee]'(?>[^\\']+|''|\\.)*'        #string constants with C-style escapes
-    |   (?<stringDollarTag>\$[a-zA-Z_]*\$) #dollar-quoted string
+    |   (?<stringDollarTag>\$[a-zA-Z\d_]*\$) #dollar-quoted string
             [^$]*+  #speed improves
             .*?
         \k<stringDollarTag>
